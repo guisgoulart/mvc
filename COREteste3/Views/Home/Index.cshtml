@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <body>
+        <title>Index</title>
+        <div>
+            <h1>View do Home Controller</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Nome
+                        </th>
+                        <th>
+                            Categoria
+                        </th>
+                        <th>
+                            Preço
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var produto in ViewBag.Produtos)
+                    {
+                        <tr>
+                            <td>@produto.Nome</td>
+                            <td>@produto.Categoria</td>
+                            <td>@produto.Preco</td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </body>
+</head>
+</html>
